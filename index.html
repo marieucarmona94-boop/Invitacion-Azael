@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- TÍTULO DE LA PÁGINA Y VISTA PREVIA DE WHATSAPP -->
+    <title>Invitación para mi Amigo Azael ✉️</title>
+    
+    <!-- META TAGS DE OPENGRAPH (Para vista previa en WhatsApp) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Invitación para mi Amigo Santiago ✉️">
+    <meta property="og:description" content="¡Tienes un mensaje especial y confidencial de tu amigo Abdiel! Toca para abrir la carta.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1635863138275-d9b33299680b?auto=format&fit=crop&w=1200&h=630&q=80">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Invitación para mi Amigo Azael ✉️">
+    <meta name="twitter:description" content="¡Tienes un mensaje especial y confidencial de tu amigo Abdiel! Toca para abrir la carta.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1635863138275-d9b33299680b?auto=format&fit=crop&w=1200&h=630&q=80">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .font-comic { font-family: 'Bangers', cursive; }
+        .font-body { font-family: 'Outfit', sans-serif; }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(239, 68, 68, 0.7), 0 0 30px rgba(234, 179, 8, 0.5); }
+            50% { box-shadow: 0 0 30px rgba(239, 68, 68, 1), 0 0 45px rgba(234, 179, 8, 0.8); }
+        }
+        
+        .arc-reactor {
+            animation: pulse-glow 2s infinite ease-in-out;
+        }
+
+        .gold-text {
+            background: linear-gradient(135deg, #FFE259 0%, #FFA751 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .iron-bg {
+            background: radial-gradient(circle at top, #1e1b4b 0%, #090d16 100%);
+        }
+    </style>
+</head>
+<body class="iron-bg font-body text-slate-100 min-h-screen w-full flex flex-col items-center justify-center p-3 sm:p-6 overflow-y-auto">
+
+    <!-- CONTENEDOR PRINCIPAL: CARTA PARA Azael-->
+    <div class="max-w-md w-full relative my-auto">
+
+        <!-- ================= CARTA 1: SOBRE CERRADO ================= -->
+        <div id="sobre-cerrado" class="w-full cursor-pointer transition duration-300 transform active:scale-95" onclick="abrirCarta()">
+            <div class="bg-gradient-to-b from-slate-900 via-red-950 to-slate-950 border-2 border-amber-500/50 rounded-3xl p-6 sm:p-8 shadow-2xl relative text-center overflow-hidden">
+                
+                <div class="absolute top-3 right-3 bg-amber-500/10 border border-amber-400/40 px-2 py-1 rounded-lg text-right">
+                    <p class="text-[8px] font-mono text-amber-300">STARK INDUSTRIES</p>
+                    <p class="text-[7px] font-mono text-slate-400">CONFIDENCIAL</p>
+                </div>
+
+                <div class="my-5 flex justify-center">
+                    <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-cyan-950 border-4 border-cyan-400 flex items-center justify-center arc-reactor shadow-xl relative">
+                        <svg class="w-10 h-10 sm:w-12 sm:h-12 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <span class="absolute -bottom-1 bg-red-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full border border-amber-400">S.H.I.E.L.D.</span>
+                    </div>
+                </div>
+
+                <div class="space-y-1.5 mb-5">
+                    <p class="text-[10px] uppercase tracking-widest text-amber-400 font-bold">Transmisión Secreta Para:</p>
+                    <h2 class="text-3xl sm:text-4xl font-comic tracking-wider text-white gold-text uppercase">Azael</h2>
+                    <p class="text-xs text-slate-400 italic">Toca el sobre para abrir la carta</p>
+                </div>
+
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-red-600 text-slate-950 font-extrabold text-xs px-5 py-2.5 rounded-full shadow-lg">
+                    <span>ABRIR CARTA ✉️</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= CARTA 2: CONTENIDOS DE LA CARTA ================= -->
+        <div id="carta-abierta" class="hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 rounded-3xl border-2 border-amber-500/50 p-5 sm:p-7 shadow-2xl relative">
+            
+            <div class="flex items-center justify-between border-b border-amber-500/30 pb-3 mb-4">
+                <div class="flex items-center space-x-2">
+                    <span class="inline-block w-2.5 h-2.5 bg-red-500 rounded-full animate-ping"></span>
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-amber-400">Mensaje Prioritario</span>
+                </div>
+                <span class="text-[10px] font-mono text-slate-400">STARK-3000</span>
+            </div>
+
+            <div class="text-center space-y-4">
+                
+                <h1 class="text-3xl sm:text-4xl font-comic tracking-wide gold-text uppercase">
+                    ¡Llamado Superheroico!
+                </h1>
+
+                <p class="text-lg text-slate-100 font-bold">
+                    ¡Hola, <span class="text-amber-400 border-b-2 border-amber-400">Azael</span>! ⚡
+                </p>
+
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed text-justify sm:text-center">
+                    Tu gran amigo <strong class="text-red-400">Abdiel</strong> está preparando su laboratorio y ajustando los últimos detalles de su traje para celebrar un cumpleaños <strong class="text-amber-300">lleno de poder y diversión</strong> estilo Iron Man.
+                </p>
+
+                <div class="bg-red-950/40 border border-red-500/30 rounded-2xl p-4 my-2 text-center space-y-2">
+                    <p class="text-xs font-bold text-amber-400 uppercase tracking-wider">📜 Misión Especial</p>
+                    <p class="text-xs text-slate-200 leading-normal">
+                        Azael, presiona el botón a continuación para reproducir la transmisión en video que Abdiel preparó especialmente para ti:
+                    </p>
+                </div>
+
+                <!-- BOTÓN PRINCIPAL CON ENLACE DE GOOGLE DRIVE DIRECTO -->
+                <a href="https://drive.google.com/file/d/1-hVdUUuxQ_AhYZUqD1ixLJtR5jFgUXk_/preview" target="_blank" rel="noopener noreferrer" class="w-full py-4 px-4 bg-gradient-to-r from-red-600 via-amber-500 to-red-600 hover:from-red-500 hover:to-amber-400 text-slate-950 font-extrabold rounded-2xl shadow-xl transition transform active:scale-95 text-sm sm:text-base tracking-wide uppercase flex items-center justify-center gap-3 no-underline">
+                    <svg class="w-7 h-7 fill-current text-slate-950" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <span>VER VIDEO DE LA INVITACIÓN 🎬</span>
+                </a>
+
+                <p class="text-xs text-slate-300 pt-2">
+                    ¿Aceptas la misión de acompañar a <strong class="text-red-400">Abdiel</strong> en este gran día? 🚀
+                </p>
+
+                <button onclick="confirmarAsistencia()" class="w-full py-3 px-4 bg-slate-900 border border-emerald-500/60 hover:bg-emerald-950 text-emerald-400 font-extrabold rounded-xl transition text-xs tracking-wider uppercase">
+                    ¡ACEPTAR MISIÓN Y CONFIRMAR! 💥
+                </button>
+
+                <div id="confirmacion-exito" class="hidden p-3 bg-emerald-950/90 border border-emerald-500/50 text-emerald-300 rounded-xl text-xs font-semibold">
+                    ✨ ¡Excelente! Le hemos notificado a Abdiel que Azael asistirá a la fiesta.
+                </div>
+
+            </div>
+
+            <div class="mt-5 text-center border-t border-slate-800/80 pt-3 flex justify-between items-center text-[9px] text-slate-500 font-mono">
+                <span>STARK INDUSTRIES</span>
+                <span>PARA: Azael</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function abrirCarta() {
+            document.getElementById('sobre-cerrado').classList.add('hidden');
+            document.getElementById('carta-abierta').classList.remove('hidden');
+        }
+
+        function confirmarAsistencia() {
+            document.getElementById('confirmacion-exito').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
